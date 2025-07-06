@@ -1,5 +1,17 @@
-# Circuit_breaker
+# Circuit Breaker
 
-Circuit breaker was device designed to help me with performing Automotive tests. Some of tests demanded very fast swithing on and switching of he power. AVR was controlling transistors responsible for stopping and enabling current flow from power supply to device under test. 2 LEDs were indicating states:
-- green one was indicating active state of transistors
-- red one was indicating cut-of state of transistors
+This project is a simple AVR-based circuit breaker designed to assist in automotive testing scenarios where precise and fast toggling of power (below 300ns) is required. 
+
+## Features
+
+- **Power control** to the device under test using transistors.
+- **Manual toggle** using a physical button.
+- **Two LEDs** indicate current state:
+  - **Green LED**: Power is ON (transistors active)
+  - **Red LED**: Power is OFF (transistors disabled)
+- **Debouncing** implemented via a software delay.
+- **Compact code** suitable for ATmega328 and similar microcontrollers.
+
+## Use Case
+
+Some automotive test scenarios require rapid and repeated power cycling. This device makes it easier to manage that process safely and repeatedly.
